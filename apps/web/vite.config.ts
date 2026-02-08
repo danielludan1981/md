@@ -27,6 +27,11 @@ export default defineConfig(({ mode }) => {
     base,
     define: { process },
     envPrefix: [`VITE_`, `CF_`],
+    server: {
+      port: 5173,
+      strictPort: true,
+      host: true,
+    },
     plugins: [
       vue(),
       isCfWorkers && cloudflare(),
